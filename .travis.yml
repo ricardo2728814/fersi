@@ -1,0 +1,23 @@
+language: node_js
+node_js:
+ - "10.15"
+
+branches:
+  only:
+    - master
+    - develop
+
+addons:
+  chrome: stable
+
+before_script:
+  - yarn global add @angular/cli
+
+cache:
+  yarn: true
+  directories:
+    - node_modules
+
+script:
+  - ng test --watch=false
+  - ng build --prod
