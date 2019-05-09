@@ -30,3 +30,7 @@ $fersi-web-theme: mat-light-theme($fersi-web-primary, $fersi-web-accent, $fersi-
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.flex-fill {
+    flex: 1 1 auto;
+}
