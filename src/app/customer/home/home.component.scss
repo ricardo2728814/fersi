@@ -1,0 +1,14 @@
+:host {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+}
+
+mat-grid-list {
+    margin: auto;
+    max-width: 1200px;
+}
+
+mat-grid-tile img {
+    width: 100%;
+}
