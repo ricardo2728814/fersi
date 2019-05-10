@@ -43,3 +43,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .bg-accent-dark{
     background-color: mat-color($fersi-web-accent, 'darker')
 }
+.margin-top-toolbar{
+    margin-top: 40px;
+}
