@@ -1,0 +1,17 @@
+<form class="max-width-md margin-top-toolbar" style="margin:auto; display:flex; flex-direction: column;" id="loginForm"
+  (submit)="submit()">
+  <h1 class="mat-h1">Producto</h1>
+  <mat-form-field appearance="outline">
+    <mat-label>Nombre</mat-label>
+    <input matInput [(ngModel)]="name" name="name">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Descripción</mat-label>
+    <input matInput [(ngModel)]="description" name="description">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Precio</mat-label>
+    <input matInput [(ngModel)]="price" name="price" type="number">
+  </mat-form-field>
+  <button mat-button color="primary">{{isUpdate? "Guardar" : "Crear"}}</button>
+</form>

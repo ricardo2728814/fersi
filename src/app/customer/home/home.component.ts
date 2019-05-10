@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Product } from '../../models/Product';
-
+import { ProductService } from 'src/app/services/product.service';
+import { map } from "rxjs/operators";
 
 @Component({
   selector: 'app-home',
@@ -11,21 +12,18 @@ import { Product } from '../../models/Product';
 export class HomeComponent implements OnInit {
 
   constructor(
-    private router: Router
+    private router: Router,
+    private productService: ProductService
   ) { }
 
-  products: Product[] = [
-    { image: "/assets/sample.jpg", name: "Collar", price: 50.0, id: "mLDMT16"},
-    { image: "/assets/sample.jpg", name: "Collar", price: 50.0, id: "mLDMT16"},
-    { image: "/assets/sample.jpg", name: "Collar", price: 50.0, id: "mLDMT16"},
-    { image: "/assets/sample.jpg", name: "Collar", price: 50.0, id: "mLDMT16"},
-    { image: "/assets/sample.jpg", name: "Collar", price: 50.0, id: "mLDMT16"},
-    { image: "/assets/sample.jpg", name: "Collar", price: 50.0, id: "mLDMT16"},
-    { image: "/assets/sample.jpg", name: "Collar", price: 50.0, id: "mLDMT16"},
-    { image: "/assets/sample.jpg", name: "Collar", price: 50.0, id: "mLDMT16"},
-  ]
+  products: Product[] = []
 
   ngOnInit() {
+    this.productService.getHomeProducts().pipe(
+      map(products=>products.map(p=>({...p, image: p.images[0]})))
+    ).subscribe(
+      products=>this.products = products
+    )
   }
 
   goToProduct(p: Product) {
