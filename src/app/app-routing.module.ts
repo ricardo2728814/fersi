@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   { path: 'c', loadChildren: './customer/customer.module#CustomerModule' },
+  { path: 'product/:id', loadChildren: './shared/shared.module#SharedModule' },
   { path: '', redirectTo: 'c', pathMatch: 'full'}
 ];
 

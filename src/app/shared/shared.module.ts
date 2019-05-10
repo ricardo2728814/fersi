@@ -7,11 +7,14 @@ import {
   MatIconModule,
   MatMenuModule,
 } from "@angular/material";
+import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { SharedRoutingModule } from './shared-routing.module';
 
 @NgModule({
-  declarations: [NavbarComponent],
+  declarations: [NavbarComponent, ProductDetailComponent],
   imports: [
     CommonModule,
+    SharedRoutingModule,
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,

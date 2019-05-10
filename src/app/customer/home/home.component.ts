@@ -15,23 +15,21 @@ export class HomeComponent implements OnInit {
   ) { }
 
   products: Product[] = [
-    { image: "/assets/sample.jpg", name: "Collar", price: 50.0 },
-    { image: "/assets/sample.jpg", name: "Collar", price: 50.0 },
-    { image: "/assets/sample.jpg", name: "Collar", price: 50.0 },
-    { image: "/assets/sample.jpg", name: "Collar", price: 50.0 },
-    { image: "/assets/sample.jpg", name: "Collar", price: 50.0 },
-    { image: "/assets/sample.jpg", name: "Collar", price: 50.0 },
-    { image: "/assets/sample.jpg", name: "Collar", price: 50.0 },
-    { image: "/assets/sample.jpg", name: "Collar", price: 50.0 },
-    { image: "/assets/sample.jpg", name: "Collar", price: 50.0 },
-    { image: "/assets/sample.jpg", name: "Collar", price: 50.0 },
+    { image: "/assets/sample.jpg", name: "Collar", price: 50.0, id: "mLDMT16"},
+    { image: "/assets/sample.jpg", name: "Collar", price: 50.0, id: "mLDMT16"},
+    { image: "/assets/sample.jpg", name: "Collar", price: 50.0, id: "mLDMT16"},
+    { image: "/assets/sample.jpg", name: "Collar", price: 50.0, id: "mLDMT16"},
+    { image: "/assets/sample.jpg", name: "Collar", price: 50.0, id: "mLDMT16"},
+    { image: "/assets/sample.jpg", name: "Collar", price: 50.0, id: "mLDMT16"},
+    { image: "/assets/sample.jpg", name: "Collar", price: 50.0, id: "mLDMT16"},
+    { image: "/assets/sample.jpg", name: "Collar", price: 50.0, id: "mLDMT16"},
   ]
 
   ngOnInit() {
   }
 
   goToProduct(p: Product) {
-    console.log(p)
+    this.router.navigate(["product", p.id])
   }
 
 }
