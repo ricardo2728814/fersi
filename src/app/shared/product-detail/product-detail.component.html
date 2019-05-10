@@ -1,0 +1,18 @@
+<div *ngIf="product != null">
+  <h1 class="mat-display-2 flex-fill margin-top-toolbar">{{product.name}}</h1>
+
+  <div class="image-display max-width-md bg-accent-light">
+    <img matTooltip="Oprime para ver más fotos" *ngIf="imageToDisplay != null" [src]="imageToDisplay" (click)="changeImage()">
+    <div *ngIf="imageToDisplay == null" class="mat-body-1" style="width:400px; heigth: 400px;">
+      El producto seleccionado no cuenta con imagen por el momento.
+    </div>
+  </div>
+  <div class="flex-fill max-width-md" style="margin:auto;">
+      <h2 class="mat-display-1" style="text-align:end;">Costo: ${{product.price}}</h2>
+      <h1 class="mat-h1">Descripción:</h1>
+      <p class="mat-body-1">{{product.description}}</p>
+  </div>
+</div>
+<div *ngIf="product == null">
+  Cargando...
+</div>

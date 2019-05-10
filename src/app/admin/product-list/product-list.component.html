@@ -1,0 +1,10 @@
+<mat-action-list class="max-width-md" style="margin:auto;">
+  <ng-container *ngFor="let p of products">
+    <button mat-list-item (click)="navProduct(p)">{{p.name}}<span class="flex-fill"></span>
+      <mat-icon>edit</mat-icon>
+    </button>
+  </ng-container>
+  <button mat-list-item (click)="createProduct()">Añadir<span class="flex-fill"></span>
+    <mat-icon>add</mat-icon>
+  </button>
+</mat-action-list>

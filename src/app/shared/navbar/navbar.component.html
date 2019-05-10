@@ -19,5 +19,6 @@
       <mat-icon>person_outline</mat-icon>
       <span>Logout</span>
     </button>
+    <button mat-menu-item *ngIf="isUserLoggedIn" (click)="navProductos()">Productos</button>
   </mat-menu>
 </mat-toolbar>

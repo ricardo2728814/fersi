@@ -1,0 +1,22 @@
+:host{
+    display: flex;
+    flex-direction: column;
+}
+
+.image-display {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    margin: auto;
+}
+
+.image-display img {
+    width: 100%;
+    margin: auto;
+    cursor: pointer;
+}
+
+h1 {
+    align-self: center;
+    text-align: center;
+}
