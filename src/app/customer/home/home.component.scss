@@ -1,0 +1,19 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+}
+
+mat-grid-list {
+    width: 100%;
+}
+
+mat-grid-tile {
+  cursor: pointer;
+}
+
+mat-grid-tile img {
+    user-select: none;
+    width: 100%;
+}

@@ -1,0 +1,24 @@
+<mat-toolbar color="primary">
+  <button mat-button (click)="homeAction()">
+    <h1 class="mat-h1">Fersi</h1>
+  </button>
+  <span class="flex-fill"></span>
+  <button mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <div mat-menu-item *ngIf="isUserLoggedIn">
+      <mat-icon>face</mat-icon>
+      <span>{{userName}}</span>
+    </div>
+    <button mat-menu-item *ngIf="!isUserLoggedIn" (click)="login()">
+      <mat-icon>person</mat-icon>
+      <span>Login</span>
+    </button>
+    <button mat-menu-item *ngIf="isUserLoggedIn" (click)="logout()">
+      <mat-icon>person_outline</mat-icon>
+      <span>Logout</span>
+    </button>
+    <button mat-menu-item *ngIf="isUserLoggedIn" (click)="navProductos()">Productos</button>
+  </mat-menu>
+</mat-toolbar>

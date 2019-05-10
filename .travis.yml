@@ -12,6 +12,7 @@ addons:
 
 before_script:
   - yarn global add @angular/cli
+  - npm install
 
 cache:
   yarn: true
