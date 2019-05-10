@@ -16,12 +16,25 @@ export class ProductDetailComponent implements OnInit {
   ) { }
 
   product: Product = null;
+  private imageIndex: number = null
+  imageToDisplay: string = null
 
   ngOnInit() {
     this.route.paramMap.subscribe(paramMap => {
       console.log(paramMap.get("id"))
-      this.product = { description: lorem,  name: "Collar", price: 50.0, images: ["/assets/sample.jpg", "/assets/sample.jpg", "/assets/sample.jpg"] }
+      this.product = {
+        description: lorem, name: "Collar", price: 50.0, images: [
+          "/assets/sample.jpg",
+          "/assets/sample.jpg",
+        ]
+      }
+      this.imageToDisplay = this.product.images[0];
+      this.imageIndex = 0;
     })
   }
-
+  changeImage() {
+    this.imageIndex++;
+    if (this.imageIndex >= this.product.images.length) this.imageIndex = 0;
+    this.imageToDisplay = this.product.images[this.imageIndex];
+  }
 }

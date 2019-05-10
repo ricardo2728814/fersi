@@ -2,7 +2,7 @@
   <h1 class="mat-display-2 flex-fill margin-top-toolbar">{{product.name}}</h1>
 
   <div class="image-display max-width-md bg-accent-light">
-    <img [src]="product.images[0]">
+    <img matTooltip="Oprime para ver más fotos" [src]="imageToDisplay" (click)="changeImage()">
   </div>
   <div class="flex-fill max-width-md" style="margin:auto;">
       <h2 class="mat-display-1" style="text-align:end;">Costo: ${{product.price}}</h2>

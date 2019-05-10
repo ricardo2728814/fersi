@@ -7,6 +7,7 @@ import {
   MatIconModule,
   MatMenuModule,
 } from "@angular/material";
+import {MatTooltipModule} from '@angular/material/tooltip';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { SharedRoutingModule } from './shared-routing.module';
 
@@ -19,6 +20,7 @@ import { SharedRoutingModule } from './shared-routing.module';
     MatButtonModule,
     MatIconModule,
     MatMenuModule,
+    MatTooltipModule,
   ], exports: [
     NavbarComponent,
   ]
