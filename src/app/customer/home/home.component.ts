@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Product } from '../../models/Product';
+
 
 @Component({
   selector: 'app-home',
