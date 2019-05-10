@@ -34,3 +34,15 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .flex-fill {
     flex: 1 1 auto;
 }
+.bg-primary-dark{
+    background-color: mat-color($fersi-web-primary, 'darker')
+}
+.bg-accent-light{
+    background-color: mat-color($fersi-web-accent, 'lighter')
+}
+.bg-accent-dark{
+    background-color: mat-color($fersi-web-accent, 'darker')
+}
+.margin-top-toolbar{
+    margin-top: 40px;
+}

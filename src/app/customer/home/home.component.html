@@ -1,0 +1,11 @@
+<h1 class="mat-display-1 flex-fill margin-top-toolbar" >Productos destacados</h1>
+<mat-grid-list cols="3" rowHeight="1:1" gutterSize="5" class="flex-fill">
+  <mat-grid-tile *ngFor="let product of products" class="bg-primary-dark" (click)="goToProduct(product)" >
+    <img src="/assets/sample.jpg" />
+    <mat-grid-tile-footer>
+        {{product.name}}
+        <span class="flex-fill" ></span>
+        ${{product.price}}
+    </mat-grid-tile-footer>
+  </mat-grid-tile>
+</mat-grid-list>
